@@ -1,11 +1,7 @@
 # Phishing Domain Detection
 
 
-These project which is called phishing domain detection is used to detect whether the given link is phishing or not. 
-
-Tech Stack Used = Django, HTML, CSS, Machine Learning.
-
-These was deployed on the heroku and you can visit that website by going to "https://thephish.herokuapp.com/"
+These project is used to detect whether the given link is phishing or not. 
 
 **What is Phishing** 
 
@@ -27,3 +23,7 @@ the attacker gets access to that information.
 > Based on output from ML algorithms, we will print whether given link is phising or not in the website
 
 ```
+
+Tech Stack Used = Django, HTML, CSS, Machine Learning.
+
+These was deployed on the heroku and you can visit that website by going to "https://thephish.herokuapp.com/"
