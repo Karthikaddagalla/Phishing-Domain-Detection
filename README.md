@@ -5,7 +5,7 @@ These project is used to detect whether the given link is phishing or not.
 
 **What is Phishing** 
 
-Phishing is an type of attack in which an attacker sends a link to the victim and when victim clicks on that link and enter his personal information, 
+Phishing is an type of attack in which an attacker sends a link to the victim and when victim clicks on that link and enters his personal information, 
 the attacker gets access to that information. 
 
 **How it Works:** 
