@@ -10,7 +10,7 @@ These was deployed on the heroku and you can visit that website by going to "htt
 **What is Phishing** 
 
 Phishing is an type of attack in which an attacker sends a link to the victim and when victim clicks on that link and enter his personal information, 
-then the attacker gets access to that information. 
+the attacker gets access to that information. 
 
 **How it Works:** 
 ```
