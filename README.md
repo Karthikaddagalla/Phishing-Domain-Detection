@@ -7,6 +7,11 @@ Tech Stack Used = Django, HTML, CSS, Machine Learning.
 
 These was deployed on the heroku and you can visit that website by going to "https://thephish.herokuapp.com/"
 
+**What is Phishing** 
+
+Phishing is an type of attack in which an attacker sends a link to the victim and when victim clicks on that link and enter his personal information, 
+the attacker gets access to that information. 
+
 **How it Works:** 
 ```
 > User enters a link in the website
