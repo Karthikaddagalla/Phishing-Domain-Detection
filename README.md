@@ -14,9 +14,9 @@ the attacker gets access to that information.
 
 > The link will be sent to the django backend
 
-> Seven pre trained Machine learning algorithms(Logistic Regression, Support Vector Machines , K Nearest Neighbours,
-  Decision Tree Classifier, Random Forest Classifier Gradient Boosting Classifier and Multi Layer Perceptron) will 
-  predict whether the given link is phishing or not.
+> Seven pre-trained Machine learning algorithms(Logistic Regression, Support Vector Machines ,
+  K Nearest Neighbours, Decision Tree Classifier, Random Forest Classifier Gradient Boosting Classifier and
+  Multi Layer Perceptron) will be used to predict whether the given link is phishing or not.
   
 > Based on voting algorithm(majority vote) we will find whether the link is phishing or not.   
 
