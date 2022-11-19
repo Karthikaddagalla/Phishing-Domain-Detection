@@ -20,7 +20,7 @@ the attacker gets access to that information.
   
 > Based on voting algorithm(majority vote) we will find whether the link is phishing or not.   
 
-> Based on output from ML algorithms, we will print whether given link is phising or not in the website
+> Based on output from ML algorithms, we will print whether given link is phishing or not in the website
 
 ```
 
