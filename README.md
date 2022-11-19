@@ -24,6 +24,6 @@ the attacker gets access to that information.
 
 ```
 
-Tech Stack Used = Django, HTML, CSS, Machine Learning.
+**Tech Stack Used** = Django, HTML, CSS, Machine Learning.
 
 These was deployed on the heroku and you can visit that website by going to "https://thephish.herokuapp.com/"
