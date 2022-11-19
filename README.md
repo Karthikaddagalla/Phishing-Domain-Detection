@@ -1,4 +1,4 @@
-# Phishing_Domain_Detection
+# Phishing Domain Detection
 
 
 These project which is called phishing domain detection is used to detect whether the given link is phishing or not. 
