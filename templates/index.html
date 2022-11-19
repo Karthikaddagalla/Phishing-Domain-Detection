@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+    <title>ThePhish</title>
+    <link rel="icon" href="{% static 'main_icon_9.png' %}"  sizes="32x32">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img src="{% static 'image_3_phishing.png' %}" alt="Image not found" >
+
+    </div>
+
+    
+
+
+
+
+
+    <div class="container1">
+
+
+        <u style="color: darkgreen;"><h1 style="margin-left: 40px;margin-top: 10px;">Predict Using Link</h1></u>
+        <p style="font-size: 20px;color: darkblue;margin-left: 35px;">Enter a Link to check whether the link is Phishing or not.</p>
+
+        <form method="post" id = "form1" style="color: black;">
+
+            <table id = "table1">
+                {{form.as_table}}
+
+            </table>
+
+            <button type = "submit"> Submit </button>
+
+        
+
+            {% csrf_token %}
+
+        </form> 
+
+    </div>
+
+
+
+        {% if pred == "0" %}
+        <p style=" font-size: large;text-align: center;">Given Link : <a href= {{ link_is }} style="color: darkblue;">{{ link_is }}</a></p>
+        <h1 class = "results" style="color: darkblue;" >It is not Phishing</h1>
+        
+
+        {% elif pred == "1" %}
+        <p style=" font-size: large;text-align: center;">Given Link : <a href= {{ link_is }} style="color: darkblue;">{{ link_is }}</a></p>
+        <h1 class = "results" style="color: darkblue;">It is Phishing Link</h1>
+  
+        {% elif pred == "2" %}
+        <p style=" font-size: large;text-align: center;">Given Link : <a href= {{ link_is }} style="color: darkblue;">{{ link_is }}</a></p>
+        <h1 class = "results" style="color: darkblue;">The link is not working</h1>
+
+        {% elif pred == "5" %}
+        <p style=" font-size: large;text-align: center;">Given Link : <a href= {{ link_is }} style="color: darkblue;">{{ link_is }}</a></p>
+        <h1 class = "results" style="color: darkblue;">Please Enter an link with http / https</h1>
+        
+        {% endif %}
+
+
+
+
+
+
+
+</body>
+
+<footer> <small>&copy; Copyright 2022, Preserved by Respective Owners</small> </footer> 
+
+</html>
