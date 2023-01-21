@@ -27,3 +27,6 @@ the attacker gets access to that information.
 **Tech Stack Used:** Django, HTML, CSS, Machine Learning.
 
 These project was deployed on the heroku and you can visit that website by going to https://thephish.herokuapp.com/
+
+![phishh_2](https://user-images.githubusercontent.com/75205632/213846044-53fc73f4-785a-44a6-9aa5-4204276d8af8.png)
+
