@@ -28,5 +28,5 @@ the attacker gets access to that information.
 
 These project was deployed on the heroku and you can visit that website by going to https://thephish.herokuapp.com/
 
-![phishh_2](https://user-images.githubusercontent.com/75205632/213846044-53fc73f4-785a-44a6-9aa5-4204276d8af8.png)
+![image](https://user-images.githubusercontent.com/75205632/215396525-8a183774-3433-403d-8e23-d91f02db6800.png)
 
