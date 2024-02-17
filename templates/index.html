@@ -8,15 +8,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+
     <title>ThePhish</title>
-    <link rel="icon" href="{% static 'main_icon_9.png' %}"  sizes="32x32">
+    <link rel="icon" href="{% static 'main_icon_9.png' %}?v=1"  sizes="32x32">
+    <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
+
 
 
 </head>
 
 <body>
 
-    <div class="container">
+
+    
+
+    <div class="icon">
 
         <img src="{% static 'image_3_phishing.png' %}" alt="Image not found" >
 
@@ -26,60 +32,110 @@
 
 
 
+    <div class="main_content">
 
 
-    <div class="container1">
+        <u style="color: #161b33;"><h1 style="margin-left: 40px;color: #161b33;margin-bottom: 100px;">Phishing Prediction Website</h1></u>
+        <!-- <p style="font-size: 20px;color: darkblue;margin-left: 35px;margin-bottom: 20px;">Enter a Link to check whether the link is Phishing or not.</p> -->
+        
+       
+        
+    <div class="searchBox">
+
+        <form method="post" id = "form1">
+          
+            {{form.Enter_a_Valid_Link}}
+
+            <button class="searchButton" type="submit">
+               
+              
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                                <g clip-path="url(#clip0_2_17)">
+                                <g filter="url(#filter0_d_2_17)">
+                                <path d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"></path>
+                                </g>
+                                </g>
+                                <defs>
+                                <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139" height="29.7139" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                                <feOffset dy="4"></feOffset>
+                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_17"></feBlend>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17" result="shape"></feBlend>
+                                </filter>
+                                <clipPath id="clip0_2_17">
+                                <rect width="28.0702" height="28.0702" fill="white" transform="translate(0.403503 0.526367)"></rect>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                                
+
+            </button>
+
+            {% csrf_token %}        
+        </form> 
+
+    </div >
 
 
-        <u style="color: darkgreen;"><h1 style="margin-left: 40px;margin-top: 10px;">Predict Using Link</h1></u>
-        <p style="font-size: 20px;color: darkblue;margin-left: 35px;">Enter a Link to check whether the link is Phishing or not.</p>
+        <div class="results">
 
-        <form method="post" id = "form1" style="color: black;">
-
-            <table id = "table1">
-                {{form.as_table}}
-
-            </table>
-
-            <button type = "submit"> Submit </button>
-
+        {% if pred == "0" %}
+        <p style=" font-size: large;text-align: center;color: black;">
+            Submitted Link: <a href= {{ link_is }} style="color: darkblue;font-size: large;"  target="_blank">{{ link_is }}</a>
+        </p>
+        <h1 class = "result_text" style="color: darkgreen;" >Confirmed: Not a Phishing Link!</h1>
         
 
-            {% csrf_token %}
+        {% elif pred == "1" %}
+        <p style=" font-size: large;text-align: center;color: black;">Given Link : <a href= {{ link_is }} style="color: darkblue;" target="_blank">{{ link_is }}</a></p>
+        <h1 class = "result_text" style="color: red;">Caution: This Link May Lead to a Phishing Site!</h1>
+  
+        {% elif pred == "2" %}
+        <p style=" font-size: large;text-align: center;color: black;">Given Link : <a href= {{ link_is }} style="color: darkblue;" target="_blank">{{ link_is }}</a></p>
+        <h1 class = "result_text" style="color: darkblue;">Given link is not working</h1>
 
-        </form> 
+        {% elif pred == "5" %}
+        <p style=" font-size: large;text-align: center;color: black;">Given Link : <a href= {{ link_is }} style="color: darkblue;" target="_blank">{{ link_is }}</a></p>
+        <h1 class = "result_text" style="color: darkblue;">Please Enter a valid link with http / https</h1>
+        
+        {% endif %}
 
     </div>
 
 
+    
 
-        {% if pred == "0" %}
-        <p style=" font-size: large;text-align: center;">Given Link : <a href= {{ link_is }} style="color: darkblue;">{{ link_is }}</a></p>
-        <h1 class = "results" style="color: darkblue;" >It is not Phishing</h1>
-        
 
-        {% elif pred == "1" %}
-        <p style=" font-size: large;text-align: center;">Given Link : <a href= {{ link_is }} style="color: darkblue;">{{ link_is }}</a></p>
-        <h1 class = "results" style="color: darkblue;">It is Phishing Link</h1>
+
+    
+    <!-- <div class="container">
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+              <img src="{% static 'main_icon_9.png' %}" alt="Image not found" >
+            <h3>How it Works?</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?</p>
+            <a href="#" type="button">Read More</a>
+          </div>
+        </div>
+      </div>
+   </div> -->
+
+    </div>
+
+
   
-        {% elif pred == "2" %}
-        <p style=" font-size: large;text-align: center;">Given Link : <a href= {{ link_is }} style="color: darkblue;">{{ link_is }}</a></p>
-        <h1 class = "results" style="color: darkblue;">The link is not working</h1>
-
-        {% elif pred == "5" %}
-        <p style=" font-size: large;text-align: center;">Given Link : <a href= {{ link_is }} style="color: darkblue;">{{ link_is }}</a></p>
-        <h1 class = "results" style="color: darkblue;">Please Enter an link with http / https</h1>
-        
-        {% endif %}
-
-
-
-
-
-
 
 </body>
 
-<footer> <small>&copy; Copyright 2022, Preserved by Respective Owners</small> </footer> 
+<footer> <small>&copy; Copyright 2024, Preserved by Respective Owners</small> </footer> 
 
 </html>

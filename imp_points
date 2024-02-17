@@ -1,0 +1,11 @@
+We had a big problem while building the docker image. 
+
+We had problem with installation of numpy library where it thrown various which hadn't resolved for around 1 month. Most of the errors being installation of dependency libraries for numpy like gcc, fortran, etc
+
+28-10-2022 - 7:00 am  =  we had finally resolved that error by simple changing the base image
+                         We had changed the base image from python3.7:alphine to the python:3.9
+
+28-10-2022 - 10:00 am  =  Finally, our application has been dockerized and working fine with the given links.
+
+docker run -p 8000:8000 thephish
+
