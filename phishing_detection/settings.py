@@ -30,7 +30,9 @@ SECRET_KEY = 'django-insecure-y5n%oa!u58-5k%b4vvth%392953bx0i_e5m8gu2qkby$2a#b^p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [".vercel.app", '.now.sh', '127.0.0.1', 'localhost']
+
 
 
 # Application definition
@@ -79,10 +81,15 @@ WSGI_APPLICATION = 'phishing_detection.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# Changing databse from sqlite to postgresql just for production purpose. So that it can be deployed on vercel
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(os.path.join(BASE_DIR, "db.sqlite3")),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '2-fDEb-6C-e*F1gDd6dbC25E*6afgaCC',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': '37271'
     }
 }
 
@@ -125,13 +132,15 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-STATIC_ROOT = '/static/'
+# STATIC_ROOT = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
+
