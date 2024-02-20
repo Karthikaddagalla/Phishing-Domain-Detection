@@ -132,6 +132,28 @@
     </div>
 
 
+    
+    <script>
+      window.addEventListener('load', function() {
+          // Function to make an asynchronous API call
+          async function makeAPICall(url) {
+              try {
+                  const response = await fetch(url);
+                  const data = await response.json();
+                  // Process the response data here
+                  console.log(data);
+              } catch (error) {
+                  console.error('Error:', error);
+              }
+          }
+
+          // Make the API call when the page loads to awaken the system if it is sleeping
+          makeAPICall("https://ebq1om82jg.execute-api.us-east-1.amazonaws.com/phishingStage/phishingResource?url=up");
+
+      });
+  </script>
+
+
   
 
 </body>
