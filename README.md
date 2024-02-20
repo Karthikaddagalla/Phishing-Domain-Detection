@@ -26,7 +26,7 @@ the attacker gets access to that information.
 
 **Tech Stack Used:** Django, HTML, CSS, Machine Learning.
 
-These project is deployed on vercel and you can visit that website by going [here](https://phishing-domain-detection-gz559ebq4-karthikaddagallas-projects.vercel.app/)
+These project is deployed on vercel and you can visit that website by going [here](https://phishing-domain-detection-gz559ebq4-karthikaddagallas-projects.vercel.app/){:target="_blank"}
 
 ![image](https://github.com/Karthikaddagalla/Phishing-Domain-Detection/assets/75205632/4f4d095a-45d3-4e10-bd9f-ed528f6180af)
 
