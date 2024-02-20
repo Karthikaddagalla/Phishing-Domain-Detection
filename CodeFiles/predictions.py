@@ -10,7 +10,7 @@ import requests
 
 def predictor(url):
 
-    request_url = f'https://ebq1om82jg.execute-api.us-east-1.amazonaws.com/phishingStage/phishingResource?url={url}'
+    request_url = f'https://wds80hjjn5.execute-api.ap-south-1.amazonaws.com/phishingStage/phishingResource?url={url}'
 
 # Send a GET request to the URL
     response = requests.get(request_url)
