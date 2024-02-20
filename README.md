@@ -14,13 +14,11 @@ the attacker gets access to that information.
 
 > The link will be sent to the django backend
 
-> Seven pre-trained Machine learning algorithms(Logistic Regression, Support Vector Machines ,
-  K Nearest Neighbours, Decision Tree Classifier, Random Forest Classifier Gradient Boosting Classifier and
-  Multi Layer Perceptron) will be used to predict whether the given link is phishing or not.
+> Django will call the phishing api hosted by myself on AWS lambda. ([API repo Link](https://github.com/Karthikaddagalla/AWS-Lambda-Phishing-Api))
   
-> Based on voting algorithm(majority vote) we will find whether the link is phishing or not.   
+> Api will make predictions based on the provided URL and return the response.   
 
-> Based on output from ML algorithms, we will print whether given link is phishing or not in the website
+> Based on Response, we will print whether given link is phishing or not in the website
 
 ```
 
