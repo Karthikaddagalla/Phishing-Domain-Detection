@@ -10,10 +10,10 @@ import requests
 
 def predictor(url):
 
-    url = 'https://ebq1om82jg.execute-api.us-east-1.amazonaws.com/phishingStage/phishingResource?url=http.com/wach?v=FKSaZyX6mU4'
+    request_url = f'https://ebq1om82jg.execute-api.us-east-1.amazonaws.com/phishingStage/phishingResource?url={url}'
 
 # Send a GET request to the URL
-    response = requests.get(url)
+    response = requests.get(request_url)
     print(response)
 
 # Check if the request was successful (status code 200)

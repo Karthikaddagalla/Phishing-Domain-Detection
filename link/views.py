@@ -1,8 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-import sys
 
-sys.path.append('../phishing_detection')
 
 from CodeFiles.predictions import predictor
 
