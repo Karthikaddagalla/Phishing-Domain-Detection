@@ -14,13 +14,15 @@ the attacker gets access to that information.
 
 > The link will be sent to the django backend
 
-> Django will call the phishing api hosted by myself on AWS lambda. ([API repo Link](https://github.com/Karthikaddagalla/AWS-Lambda-Phishing-Api))
+> Django will call the phishing api hosted by myself on AWS lambda.
   
 > Api will make predictions based on the provided URL and return the response.   
 
 > Based on Response, we will print whether given link is phishing or not in the website
 
 ```
+
+**[API Repo Link](https://github.com/Karthikaddagalla/AWS-Lambda-Phishing-Api)**
 
 **Tech Stack Used:** Django, HTML, CSS, Machine Learning.
 
