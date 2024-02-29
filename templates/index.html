@@ -13,6 +13,25 @@
     <link rel="icon" href="{% static 'main_icon_9.png' %}?v=1"  sizes="32x32">
     <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
 
+    <script>
+      window.addEventListener('load', function() {
+          // Function to make an asynchronous API call
+          async function makeAPICall(url) {
+              try {
+                  const response = await fetch(url);
+                  const data = await response.json();
+                  // Process the response data here
+                  console.log(data);
+              } catch (error) {
+                  console.error('Error:', error);
+              }
+          }
+
+          // Make the API call when the page loads to awaken the system if it is sleeping
+          makeAPICall("https://wds80hjjn5.execute-api.ap-south-1.amazonaws.com/phishingStage/phishingResource?url=up");
+
+      });
+  </script>
 
 
 </head>
@@ -133,25 +152,7 @@
 
 
     
-    <script>
-      window.addEventListener('load', function() {
-          // Function to make an asynchronous API call
-          async function makeAPICall(url) {
-              try {
-                  const response = await fetch(url);
-                  const data = await response.json();
-                  // Process the response data here
-                  console.log(data);
-              } catch (error) {
-                  console.error('Error:', error);
-              }
-          }
-
-          // Make the API call when the page loads to awaken the system if it is sleeping
-          makeAPICall("https://ebq1om82jg.execute-api.us-east-1.amazonaws.com/phishingStage/phishingResource?url=up");
-
-      });
-  </script>
+    
 
 
   
